@@ -1,0 +1,10 @@
+<template>
+    <p class="slds-text-body_large slds-p-bottom_small" style="text-align: justify;">{careerSummary.DESCRIPTION}</p>
+    <ul class="slds-list_dotted slds-p-horizontal_large slds-p-vertical_medium">
+        <template for:each={careerSummary.KEYS_POINTS} for:item="point">
+            <li key={point} class="slds-item slds-p-vertical_x-small slds-text-body_regular">
+                {point}
+            </li>
+        </template>
+    </ul>
+</template>

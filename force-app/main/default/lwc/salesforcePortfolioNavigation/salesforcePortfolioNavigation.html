@@ -1,0 +1,23 @@
+<template>
+    <div>
+        <lightning-vertical-navigation onselect={handleSelect} selected-item={selectedItem} shaded>
+            <lightning-vertical-navigation-section>
+                <lightning-vertical-navigation-item-icon label="Overview"
+                                                         name="overview"
+                                                         icon-name="standard:avatar"></lightning-vertical-navigation-item-icon>
+                <lightning-vertical-navigation-item-icon label="Experience"
+                                                         name="experience"
+                                                         icon-name="standard:work_order_item"></lightning-vertical-navigation-item-icon>
+                <lightning-vertical-navigation-item-icon label="Certifications"
+                                                         name="certifications"
+                                                         icon-name="standard:employee_contact"></lightning-vertical-navigation-item-icon>
+                <lightning-vertical-navigation-item-icon label="Projects"
+                                                         name="projects"
+                                                         icon-name="standard:lead"></lightning-vertical-navigation-item-icon>
+                <lightning-vertical-navigation-item-icon label="Skills"
+                                                         name="skills"
+                                                         icon-name="standard:education"></lightning-vertical-navigation-item-icon>
+            </lightning-vertical-navigation-section>
+        </lightning-vertical-navigation>
+    </div>
+</template>

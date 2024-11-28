@@ -1,0 +1,63 @@
+<template>
+    <div class="wrapper slds-grid slds-wrap">
+        <!-- First Column (Navigation) -->
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-8 slds-large-size_1-of-8">
+            <!-- Profile component at the top of the navigation -->
+            <c-salesforce-portfolio-profile 
+                profile-photo={PORTFOLIO_DATA.PROFILE_IMAGE} 
+                social-links={PORTFOLIO_DATA.SOCIAL_LINKS} 
+                user-details={PORTFOLIO_DATA.USER_DETAILS}> 
+            </c-salesforce-portfolio-profile>
+            <!-- Navigation items below the profile -->
+            <c-salesforce-portfolio-navigation 
+                selected-item={selectedPage} 
+                onnavigate={handleSelect}>
+            </c-salesforce-portfolio-navigation>
+        </div>
+
+        <!-- Centering Container -->
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_7-of-8 slds-large-size_7-of-8 slds-p-top_large">
+            <div class="slds-p-horizontal_x-large">
+                <template if:true={renderHeader}>
+                    <c-page-header title={headerTitle}
+                                   icon={headerIcon}
+                                   description={headerDescription}>
+                    </c-page-header>
+                </template>
+                <template if:false={renderHeader}>
+                    <div class="slds-align_absolute-center slds-p-top_x-large">
+                        <lightning-spinner variant="brand" alternative-text="Loading" size="large"
+                                           class="slds-spinner_inline"></lightning-spinner>
+                    </div>
+                </template>
+                <div class="slds-p-top_large">
+                    <template if:true={isOverview}>
+                        <c-salesforce-portfolio-overview 
+                            career-summary={PORTFOLIO_DATA.CAREER_SUMMARY}> 
+                        </c-salesforce-portfolio-overview>                        
+                    </template>
+                    <template if:true={isExperience}>
+                        <c-salesforce-portfolio-experience 
+                            experience-data={PORTFOLIO_DATA.EXPERIENCE_DATA}> 
+                        </c-salesforce-portfolio-experience>                        
+                    </template>
+                    <template if:true={isCertifications}>
+                        <c-salesforce-portfolio-certifications 
+                            certification-data={PORTFOLIO_DATA.CERTIFICATION_DATA}> 
+                        </c-salesforce-portfolio-certifications> 
+                    </template>
+                    <template if:true={isProjects}>
+                        <c-salesforce-portfolio-projects 
+                            projects-data={PORTFOLIO_DATA.PROJECTS_DATA}> 
+                        </c-salesforce-portfolio-projects>                        
+                    </template>
+                    <template if:true={isSkills}>
+                        <c-salesforce-portfolio-skills 
+                            skills-data={PORTFOLIO_DATA.SKILLS_DATA}> 
+                        </c-salesforce-portfolio-skills>                        
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

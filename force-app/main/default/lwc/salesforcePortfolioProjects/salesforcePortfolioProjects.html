@@ -1,0 +1,28 @@
+<template>
+    <div class="slds-grid slds-wrap slds-gutters" style="display: flex; align-items: stretch;">
+        <template for:each={projectsData.PROJECTS} for:item="project">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-4 slds-p-around_small" key={project.NAME} style="display: flex;">
+                <div class="slds-card" style="display: flex; flex-direction: column; padding: 10px; text-align: center;">
+                    <!-- Header Section with Image -->
+                    <div style="flex: 1;">
+                        <img 
+                            src={project.IMAGE} 
+                            alt={project.NAME} 
+                            style="max-width: 100%; max-height: 160px; object-fit: cover; border-radius: 5px; margin-bottom: 10px;" 
+                        />
+                    <!-- Body Section -->
+                        <h3 class="slds-text-heading_medium slds-m-bottom_x-small" style="font-weight: bold; margin-bottom: 10px;">
+                            {project.NAME}
+                        </h3>
+                        <p class="slds-text-body_small slds-m-bottom_small" style="margin-bottom: 10px;">{project.DESCRIPTION}</p>
+                    </div>
+                    <!-- Footer Section with GitHub Button -->
+                    <a href={project.GITHUB_REPO} target="_blank" 
+                       class="slds-button slds-button_neutral" style="margin-top: auto;">
+                        GitHub Repository
+                    </a>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

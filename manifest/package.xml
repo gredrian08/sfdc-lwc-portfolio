@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>salesforcePortfolioContainer</members>
+        <members>salesforcePortfolioProfile</members>
+        <members>salesforcePortfolioNavigation</members>
+        <members>pageHeader</members>
+        <members>salesforcePortfolioOverview</members>
+        <members>salesforcePortfolioExperience</members>
+        <members>salesforcePortfolioCertifications</members>
+        <members>salesforcePortfolioProjects</members>
+        <members>salesforcePortfolioSkills</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <version>62.0</version>
+</Package>

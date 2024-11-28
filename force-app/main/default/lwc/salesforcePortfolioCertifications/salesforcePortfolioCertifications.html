@@ -1,0 +1,20 @@
+<template>
+    <template for:each={certificationData.LIST} for:item="cert">
+        <div class="slds-card slds-m-bottom_small" key={cert.name} style="width: 100%;">
+            <div class="slds-card__body slds-p-left_medium">
+                <div class="slds-media slds-media_center">
+                    <div class="slds-media__figure">
+                        <img src={cert.icon} alt={cert.name} style="height: 70px; width: 70px;" />
+                    </div>
+                    <div class="slds-media__body">
+                        <h3 class="slds-text-heading_small">
+                            <strong>{cert.name}</strong>
+                        </h3>
+                        <p>{cert.description}</p>
+                        <p class="slds-text-color_weak">{cert.issuedDate}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</template>

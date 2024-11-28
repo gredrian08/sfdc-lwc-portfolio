@@ -1,0 +1,12 @@
+<template>
+    <div class="slds-grid slds-wrap slds-gutters">
+        <template for:each={skillsData.LIST} for:item="skill">
+            <div class="slds-p-horizontal_x-small slds-m-vertical_x-small" key={skill}>
+                <span class="slds-badge" style="background-color: #1b96ff; color: white;">
+                    <lightning-icon icon-name="utility:salesforce1" size="x-small" alternative-text="Salesforce Icon" style="vertical-align: middle; margin-right: 0.5em;"></lightning-icon>
+                    {skill}
+                </span>
+            </div>
+        </template>
+    </div>
+</template>

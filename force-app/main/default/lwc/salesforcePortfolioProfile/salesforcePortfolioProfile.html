@@ -1,0 +1,18 @@
+<template>
+    <div class="profile">
+        <img src={profilePhoto} alt="Profile Photo of {userDetails.NAME}" class="profile-photo" />
+        <div class="profile-info">
+            <h2 class="name">{userDetails.NAME}</h2>
+            <p class="title">{userDetails.ROLE}</p>
+        </div>
+        <div class="social-links">
+            <div class="social-row">
+                <template for:each={socialLinks} for:item="link">
+                    <a key={link.type} href={link.link} target="_blank">
+                        <img src={link.icon} alt={link.label} class="social-logo-circle" />
+                    </a>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

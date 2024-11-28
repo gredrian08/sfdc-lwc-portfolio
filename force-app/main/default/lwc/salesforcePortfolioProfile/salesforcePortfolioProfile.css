@@ -1,0 +1,49 @@
+.profile {
+    text-align: center;
+    margin: auto;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.profile-info {
+    margin-bottom: 20px;
+}
+
+.profile-info .name {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.profile-info .title {
+    margin: 5px 0 20px 0;
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-row {
+    display: flex;
+    gap: 15px; /* Adds space between each logo */
+}
+
+.social-logo-circle {
+    width: 30px;  /* Smaller size */
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    border: 1px solid #ccc;  /* Optional: Add a border to make the circle more defined */
+}
